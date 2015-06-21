@@ -1,0 +1,37 @@
+{
+  "name": "browser-path",
+  "description": "Path in your browser!",
+  "version": "0.0.1",
+  "files": [ "dist/path.js" ],
+  "main": "dist/path.js",
+  "scripts": {
+    "prepublish": "browserify -p tsify -t uglifyify src/node_path.ts --exclude 'buffer' --exclude '_process' --exclude 'process' -s path -o dist/path.js",
+    "start": "karma start",
+    "test": "karma start --single-run"
+  },
+  "homepage": "https://github.com/wjordan/browser-path",
+  "author": "John Vilk <jvilk@cs.umass.edu> (http://people.cs.umass.edu/~jvilk)",
+  "contributors": [
+    "Will Jordan <will.jordan@gmail.com>"
+  ],
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/wjordan/browser-path.git"
+  },
+  "bugs": {
+    "url": "https://github.com/wjordan/browser-path/issues"
+  },
+  "devDependencies": {
+    "browserify": "^10.2.4",
+    "karma": "^0.12.36",
+    "karma-browserify": "^4.2.1",
+    "karma-mocha": "^0.1.10",
+    "karma-phantomjs-launcher": "^0.2.0",
+    "mocha": "^2.2.5",
+    "phantomjs": "^1.9.17",
+    "tsify": "^0.11.2",
+    "typescript": "^1.4.1",
+    "uglifyify": "^3.0.1"
+  }
+}

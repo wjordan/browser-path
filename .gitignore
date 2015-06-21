@@ -1,0 +1,8 @@
+node_modules
+*.DS_Store
+*.log
+!tsconfig.json
+tscommand*
+dist
+.tscache
+.idea
